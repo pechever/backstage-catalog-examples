@@ -1,0 +1,33 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: web-app
+  title: "Aplicación Web E-commerce"
+  description: "Frontend de la aplicación de e-commerce desarrollado en React"
+  annotations:
+    backstage.io/managed-by-location: 'url:https://github.com/tu-usuario/backstage-catalog-examples/blob/main/components/web-app/catalog-info.yaml'
+    github.com/project-slug: 'tu-usuario/ecommerce-web-app'
+    backstage.io/techdocs-ref: 'dir:.'
+    sonarqube.org/project-key: 'ecommerce-web-app'
+  tags:
+    - frontend
+    - react
+    - typescript
+    - ecommerce
+  links:
+    - url: https://ecommerce-app.ejemplo.com
+      title: Aplicación en Producción
+      icon: web
+    - url: https://github.com/tu-usuario/ecommerce-web-app
+      title: Código Fuente
+      icon: github
+spec:
+  type: website
+  lifecycle: production
+  owner: team-frontend
+  system: ecommerce-system
+  consumesApis:
+    - user-api
+    - payment-api
+  dependsOn:
+    - component:api-service
