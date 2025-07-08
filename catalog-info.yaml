@@ -8,26 +8,22 @@ metadata:
 spec:
   type: url
   targets:
-    # Componentes
+    # Solo incluir archivos que existen
     - ./components/web-app/catalog-info.yaml
     - ./components/api-service/catalog-info.yaml
     - ./components/database/catalog-info.yaml
-    
-    # Sistemas
     - ./systems/ecommerce-system/catalog-info.yaml
     - ./systems/payment-system/catalog-info.yaml
-    
-    # Dominios
     - ./domains/retail/catalog-info.yaml
     - ./domains/finance/catalog-info.yaml
-    
-    # Recursos
     - ./resources/databases/catalog-info.yaml
-    - ./resources/queues/catalog-info.yaml
-    
-    # APIs
     - ./apis/user-api/catalog-info.yaml
-    - ./apis/payment-api/catalog-info.yaml
+    - ./users/catalog-info.yaml
+    - ./groups/catalog-info.yaml
+    # Remover archivos que no existen hasta crearlos:
+    # - ./resources/queues/catalog-info.yaml
+    # - ./apis/payment-api/catalog-info.yaml
+    # - ./templates/service-template/template.yaml
     
     # Usuarios y grupos
     - ./users/catalog-info.yaml
