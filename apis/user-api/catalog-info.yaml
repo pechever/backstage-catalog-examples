@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: user-api
+  title: "User Management API"
+  description: "API para gestión de usuarios y autenticación"
+  annotations:
+    backstage.io/managed-by-location: 'url:https://github.com/tu-usuario/backstage-catalog-examples/blob/main/apis/user-api/catalog-info.yaml'
+  tags:
+    - rest
+    - users
+    - authentication
+spec:
+  type: openapi
+  lifecycle: production
+  owner: team-backend
+  system: ecommerce-system
+  definition:
+    $text: ./openapi.yaml
