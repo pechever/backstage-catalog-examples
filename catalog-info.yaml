@@ -1,0 +1,37 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: backstage-catalog-examples
+  description: "Ejemplos completos de catalogación en Backstage"
+  annotations:
+    backstage.io/managed-by-location: 'url:https://github.com/tu-usuario/backstage-catalog-examples/blob/main/catalog-info.yaml'
+spec:
+  type: url
+  targets:
+    # Componentes
+    - ./components/web-app/catalog-info.yaml
+    - ./components/api-service/catalog-info.yaml
+    - ./components/database/catalog-info.yaml
+    
+    # Sistemas
+    - ./systems/ecommerce-system/catalog-info.yaml
+    - ./systems/payment-system/catalog-info.yaml
+    
+    # Dominios
+    - ./domains/retail/catalog-info.yaml
+    - ./domains/finance/catalog-info.yaml
+    
+    # Recursos
+    - ./resources/databases/catalog-info.yaml
+    - ./resources/queues/catalog-info.yaml
+    
+    # APIs
+    - ./apis/user-api/catalog-info.yaml
+    - ./apis/payment-api/catalog-info.yaml
+    
+    # Usuarios y grupos
+    - ./users/catalog-info.yaml
+    - ./groups/catalog-info.yaml
+    
+    # Templates
+    - ./templates/service-template/template.yaml
