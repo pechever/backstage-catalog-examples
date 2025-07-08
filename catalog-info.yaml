@@ -2,32 +2,17 @@ apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
   name: backstage-catalog-examples
-  description: "Ejemplos completos de catalogación en Backstage"
-  annotations:
-    backstage.io/managed-by-location: 'url:https://github.com/pechever/backstage-catalog-examples/blob/main/catalog-info.yaml'
+  description: "Catálogo de componentes Backstage"
 spec:
   type: url
   targets:
-    # Solo incluir archivos que existen
+    - ./groups/catalog-info.yaml
+    - ./users/catalog-info.yaml
+    - ./systems/ecommerce-system/catalog-info.yaml
     - ./components/web-app/catalog-info.yaml
     - ./components/api-service/catalog-info.yaml
-    - ./components/database/catalog-info.yaml
-    - ./systems/ecommerce-system/catalog-info.yaml
-    - ./systems/payment-system/catalog-info.yaml
-    - ./domains/retail/catalog-info.yaml
-    - ./domains/finance/catalog-info.yaml
     - ./resources/databases/catalog-info.yaml
     - ./apis/user-api/catalog-info.yaml
-    - ./users/catalog-info.yaml
-    - ./groups/catalog-info.yaml
-    # Remover archivos que no existen hasta crearlos:
-    # - ./resources/queues/catalog-info.yaml
-    # - ./apis/payment-api/catalog-info.yaml
-    # - ./templates/service-template/template.yaml
-    
-    # Usuarios y grupos
-    - ./users/catalog-info.yaml
-    - ./groups/catalog-info.yaml
     
     # Templates
     - ./templates/service-template/template.yaml
