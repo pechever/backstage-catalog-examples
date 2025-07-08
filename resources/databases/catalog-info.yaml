@@ -1,0 +1,31 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: postgres-database
+  title: "PostgreSQL Database"
+  description: "Base de datos PostgreSQL para el sistema e-commerce"
+  annotations:
+    backstage.io/managed-by-location: 'url:https://github.com/tu-usuario/backstage-catalog-examples/blob/main/resources/databases/catalog-info.yaml'
+  tags:
+    - database
+    - postgresql
+spec:
+  type: database
+  owner: team-database
+  system: ecommerce-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-cache
+  title: "Redis Cache"
+  description: "Cache Redis para mejorar el rendimiento"
+  annotations:
+    backstage.io/managed-by-location: 'url:https://github.com/tu-usuario/backstage-catalog-examples/blob/main/resources/databases/catalog-info.yaml'
+  tags:
+    - cache
+    - redis
+spec:
+  type: cache
+  owner: team-backend
+  system: ecommerce-system
