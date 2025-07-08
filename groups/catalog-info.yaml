@@ -5,7 +5,7 @@ metadata:
   title: "Equipo E-commerce"
   description: "Equipo responsable del desarrollo del sistema e-commerce"
   annotations:
-    backstage.io/managed-by-location: 'url:https://github.com/tu-usuario/backstage-catalog-examples/blob/main/groups/catalog-info.yaml'
+    backstage.io/managed-by-location: 'url:https://github.com/pechever/backstage-catalog-examples/blob/main/groups/catalog-info.yaml'
 spec:
   type: team
   children: []
@@ -17,7 +17,7 @@ metadata:
   title: "Equipo Frontend"
   description: "Equipo especializado en desarrollo frontend"
   annotations:
-    backstage.io/managed-by-location: 'url:https://github.com/tu-usuario/backstage-catalog-examples/blob/main/groups/catalog-info.yaml'
+    backstage.io/managed-by-location: 'url:https://github.com/pechever/backstage-catalog-examples/blob/main/groups/catalog-info.yaml'
 spec:
   type: team
   parent: team-ecommerce
@@ -30,7 +30,7 @@ metadata:
   title: "Equipo Backend"
   description: "Equipo especializado en desarrollo backend"
   annotations:
-    backstage.io/managed-by-location: 'url:https://github.com/tu-usuario/backstage-catalog-examples/blob/main/groups/catalog-info.yaml'
+    backstage.io/managed-by-location: 'url:https://github.com/pechever/backstage-catalog-examples/blob/main/groups/catalog-info.yaml'
 spec:
   type: team
   parent: team-ecommerce
