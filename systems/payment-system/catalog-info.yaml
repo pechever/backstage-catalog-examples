@@ -5,7 +5,7 @@ metadata:
   title: "Sistema de Pagos"
   description: "Sistema de procesamiento de pagos y transacciones"
   annotations:
-    backstage.io/managed-by-location: 'url:https://github.com/tu-usuario/backstage-catalog-examples/blob/main/systems/payment-system/catalog-info.yaml'
+    backstage.io/managed-by-location: 'url:https://github.com/pechever/backstage-catalog-examples/blob/main/systems/payment-system/catalog-info.yaml'
   tags:
     - payments
     - transactions
