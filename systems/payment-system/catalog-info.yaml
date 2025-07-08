@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: payment-system
+  title: "Sistema de Pagos"
+  description: "Sistema de procesamiento de pagos y transacciones"
+  annotations:
+    backstage.io/managed-by-location: 'url:https://github.com/tu-usuario/backstage-catalog-examples/blob/main/systems/payment-system/catalog-info.yaml'
+  tags:
+    - payments
+    - transactions
+    - finance
+spec:
+  owner: team-payments
+  domain: finance
