@@ -5,7 +5,7 @@ metadata:
   title: "Sistema de E-commerce"
   description: "Sistema completo de comercio electrónico con frontend, backend y base de datos"
   annotations:
-    backstage.io/managed-by-location: 'url:https://github.com/tu-usuario/backstage-catalog-examples/blob/main/systems/ecommerce-system/catalog-info.yaml'
+    backstage.io/managed-by-location: 'url:https://github.com/pechever/backstage-catalog-examples/blob/main/systems/ecommerce-system/catalog-info.yaml'
   tags:
     - ecommerce
     - web
