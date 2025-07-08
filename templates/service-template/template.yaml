@@ -1,0 +1,79 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: service-template
+  title: "Plantilla de Servicio"
+  description: "Plantilla para crear nuevos servicios con todas las configuraciones necesarias"
+  annotations:
+    backstage.io/managed-by-location: 'url:https://github.com/tu-usuario/backstage-catalog-examples/blob/main/templates/service-template/template.yaml'
+  tags:
+    - recommended
+    - nodejs
+    - service
+spec:
+  owner: team-backend
+  type: service
+  parameters:
+    - title: Información del Servicio
+      required:
+        - name
+        - description
+        - owner
+      properties:
+        name:
+          title: Nombre
+          type: string
+          description: Nombre único del servicio
+        description:
+          title: Descripción
+          type: string
+          description: Descripción del servicio
+        owner:
+          title: Propietario
+          type: string
+          description: Equipo propietario del servicio
+          ui:field: OwnerPicker
+          ui:options:
+            allowedKinds:
+              - Group
+    - title: Configuración del Repositorio
+      required:
+        - repoUrl
+      properties:
+        repoUrl:
+          title: URL del Repositorio
+          type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            allowedHosts:
+              - github.com
+  steps:
+    - id: template
+      name: Generar archivos
+      action: fetch:template
+      input:
+        url: ./content
+        values:
+          name: ${{ parameters.name }}
+          description: ${{ parameters.description }}
+          owner: ${{ parameters.owner }}
+    - id: publish
+      name: Publicar
+      action: publish:github
+      input:
+        allowedHosts: ['github.com']
+        description: ${{ parameters.description }}
+        repoUrl: ${{ parameters.repoUrl }}
+    - id: register
+      name: Registrar
+      action: catalog:register
+      input:
+        repoContentsUrl: ${{ steps.publish.output.repoContentsUrl }}
+        catalogInfoPath: '/catalog-info.yaml'
+  output:
+    links:
+      - title: Repositorio
+        url: ${{ steps.publish.output.remoteUrl }}
+      - title: Abrir en catálogo
+        icon: catalog
+        entityRef: ${{ steps.register.output.entityRef }}
