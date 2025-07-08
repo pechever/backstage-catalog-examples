@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: ecommerce-system
+  title: "Sistema de E-commerce"
+  description: "Sistema completo de comercio electrónico con frontend, backend y base de datos"
+  annotations:
+    backstage.io/managed-by-location: 'url:https://github.com/tu-usuario/backstage-catalog-examples/blob/main/systems/ecommerce-system/catalog-info.yaml'
+  tags:
+    - ecommerce
+    - web
+    - retail
+spec:
+  owner: team-ecommerce
+  domain: retail
