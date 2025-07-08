@@ -1,0 +1,33 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: api-service
+  title: "API Service E-commerce"
+  description: "Servicio backend REST API desarrollado en Node.js"
+  annotations:
+    backstage.io/managed-by-location: 'url:https://github.com/tu-usuario/backstage-catalog-examples/blob/main/components/api-service/catalog-info.yaml'
+    github.com/project-slug: 'tu-usuario/ecommerce-api-service'
+    backstage.io/techdocs-ref: 'dir:.'
+    prometheus.io/rule: 'api-service-alerts'
+  tags:
+    - backend
+    - nodejs
+    - api
+    - rest
+  links:
+    - url: https://api.ecommerce-app.ejemplo.com/docs
+      title: API Documentation
+      icon: docs
+    - url: https://grafana.ejemplo.com/dashboard/api-service
+      title: Monitoring Dashboard
+      icon: dashboard
+spec:
+  type: service
+  lifecycle: production
+  owner: team-backend
+  system: ecommerce-system
+  providesApis:
+    - user-api
+  dependsOn:
+    - resource:postgres-database
+    - resource:redis-cache
