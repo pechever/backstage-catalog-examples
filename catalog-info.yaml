@@ -6,13 +6,12 @@ metadata:
 spec:
   type: url
   targets:
-    - ./groups/catalog-info.yaml
-    - ./users/catalog-info.yaml
-    - ./systems/ecommerce-system/catalog-info.yaml
-    - ./components/web-app/catalog-info.yaml
-    - ./components/api-service/catalog-info.yaml
-    - ./resources/databases/catalog-info.yaml
-    - ./apis/user-api/catalog-info.yaml
-    
+    - https://raw.githubusercontent.com/pechever/backstage-catalog-examples/main/groups/catalog-info.yaml
+    - https://raw.githubusercontent.com/pechever/backstage-catalog-examples/main/users/catalog-info.yaml
+    - https://raw.githubusercontent.com/pechever/backstage-catalog-examples/main/systems/ecommerce-system/catalog-info.yaml
+    - https://raw.githubusercontent.com/pechever/backstage-catalog-examples/main/components/web-app/catalog-info.yaml
+    - https://raw.githubusercontent.com/pechever/backstage-catalog-examples/main/components/api-service/catalog-info.yaml
+    - https://raw.githubusercontent.com/pechever/backstage-catalog-examples/main/resources/databases/catalog-info.yaml
+    - https://raw.githubusercontent.com/pechever/backstage-catalog-examples/main/apis/user-api/catalog-info.yaml
     # Templates
-    - ./templates/service-template/template.yaml
+    - https://raw.githubusercontent.com/pechever/backstage-catalog-examples/main/templates/service-template/template.yaml
