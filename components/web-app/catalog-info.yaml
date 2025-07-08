@@ -5,7 +5,7 @@ metadata:
   title: "Aplicación Web E-commerce"
   description: "Frontend de la aplicación de e-commerce desarrollado en React"
   annotations:
-    backstage.io/managed-by-location: 'url:https://github.com/tu-usuario/backstage-catalog-examples/blob/main/components/web-app/catalog-info.yaml'
+    backstage.io/managed-by-location: 'url:https://github.com/pechever/backstage-catalog-examples/blob/main/components/web-app/catalog-info.yaml'
     github.com/project-slug: 'tu-usuario/ecommerce-web-app'
     backstage.io/techdocs-ref: 'dir:.'
     sonarqube.org/project-key: 'ecommerce-web-app'
