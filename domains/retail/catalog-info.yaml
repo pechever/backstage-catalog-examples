@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: retail
+  title: "Dominio de Retail"
+  description: "Agrupa todos los sistemas relacionados con ventas y comercio electrónico"
+  annotations:
+    backstage.io/managed-by-location: 'url:https://github.com/tu-usuario/backstage-catalog-examples/blob/main/domains/retail/catalog-info.yaml'
+  tags:
+    - retail
+    - ecommerce
+    - sales
+spec:
+  owner: team-retail
