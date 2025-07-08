@@ -18,7 +18,7 @@ metadata:
     - url: https://ecommerce-app.ejemplo.com
       title: Aplicación en Producción
       icon: web
-    - url: https://github.com/tu-usuario/ecommerce-web-app
+    - url: https://github.com/pechever/ecommerce-web-app
       title: Código Fuente
       icon: github
 spec:
